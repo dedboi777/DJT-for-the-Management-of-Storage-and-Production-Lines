@@ -1,6 +1,6 @@
-This project simulates a factory with production lines and a storage unit. Which have operations that can be done on them to maintain the factory.
+- This project simulates a factory with production lines and a storage unit. Which have operations that can be done on them to maintain the factory.
 
-Roles:
+- Roles:
   Danial Saad: Front-end and linking.
   Julie Wassouf: Main classes and testing.
   Tamer Hamzah: Back-end, linking, and testing.
