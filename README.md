@@ -5,6 +5,6 @@
   Julie Wassouf: Main classes and testing.
   Tamer Hamzah: Back-end, linking, and testing.
 
-Not much details were mentioned in this description given the fairly small size of the project.
+- Not much details were mentioned in this description given the fairly small size of the project.
 
-Thank you for your time.
+- Thank you for your time.
