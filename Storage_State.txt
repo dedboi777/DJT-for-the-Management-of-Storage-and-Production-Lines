@@ -1,4 +1,4 @@
-gold,7464,metals
-Oak Wood Plank,50,wood
+gold,7399,metals
+Oak Wood Plank,4712,wood
 CPU Unit,30,Electronics
-iron,80,metals
+iron,50,metals

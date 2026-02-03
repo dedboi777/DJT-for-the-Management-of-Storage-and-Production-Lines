@@ -17,7 +17,6 @@ public class Inventory {
         return rawMaterialsInventory;
     }
     public static void saveToFile() {
-        // خطوة 1: نقرأ الملف الحالي لنحفظ الفئات الموجودة
         Map<String, String> categoryMap = new HashMap<>();
         File rawFile = new File(RAW_FILE);
         if (rawFile.exists()) {
@@ -148,6 +147,7 @@ public class Inventory {
             return;
         }
         productsInventory.put(name, sum);
+        saveToFile();
     }
 
     public static void unlock(String materialId) {

@@ -6,7 +6,7 @@ import javax.swing.*;
 public class RegisterFrame extends JFrame {
     JTextField txtName;
     JTextField txtEmail;
-    JTextField txtUsername; 
+    JTextField txtUsername;
     JPasswordField txtPass;
     JPasswordField txtConfirm;
     JComboBox<String> roleBox;
@@ -53,7 +53,7 @@ public class RegisterFrame extends JFrame {
         this.setVisible(true);
     }
 
-    
+
     private void handleCreate() {
         String name = this.txtName.getText().trim();
         String email = this.txtEmail.getText().trim();
@@ -62,26 +62,33 @@ public class RegisterFrame extends JFrame {
         String confirm = new String(this.txtConfirm.getPassword());
         String role = (String) this.roleBox.getSelectedItem();
 
-        
+
         if (name.isEmpty() || email.isEmpty() || username.isEmpty() || pass.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please fill in all fields!");
-            return; 
+            return;
         }
 
-        
+
         if (!pass.equals(confirm)) {
             JOptionPane.showMessageDialog(this, "Passwords do not match!");
-            return; 
+            return;
         }
 
-        
+
         if (this.usersMap.containsKey(username)) {
             JOptionPane.showMessageDialog(this, "Username already exists! Please choose another one.");
-            return; 
+            return;
         }
 
-        
-        
+        for (String[] userInfo : usersMap.values()) {
+            if (userInfo[3].equals(email)) {
+                JOptionPane.showMessageDialog(this, "Email already exists! Please use another one.");
+                return;
+            }
+        }
+
+
+
         this.usersMap.put(username, new String[] { pass, role, name, email });
         this.saveUser(username, pass, role, name, email);
         JOptionPane.showMessageDialog(this, "Account Created Successfully!");
@@ -89,10 +96,10 @@ public class RegisterFrame extends JFrame {
         new LoginFrame();
     }
 
-    
+
     private void saveUser(String username, String pass, String role, String name, String email) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, true))) {
-            
+
             bw.write(username + "," + pass + "," + role + "," + name + "," + email);
             bw.newLine();
         } catch (IOException e) {
@@ -103,7 +110,7 @@ public class RegisterFrame extends JFrame {
     private void loadUsers() {
         File file = new File(filePath);
         if (!file.exists()) return;
-        usersMap.clear(); 
+        usersMap.clear();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = br.readLine()) != null) {

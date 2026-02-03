@@ -1,6 +1,47 @@
-ErrMsg: NO active prodution lines available
-ErrMsg: No task selected for updating
+ErrMsg: Invalid email or password. Please try again!
+ErrMsg: Production check FAILED for item 'Oak Wood Plank'. Required: 120, Available: 50
+ErrMsg: No tasks found for this line
+ErrMsg: No tasks found for this line
 ErrMsg: NO products manufactured on this line
 ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: NO products manufactured on this line
+ErrMsg: NO products manufactured on this line
+ErrMsg: NO products manufactured on this line
+ErrMsg: Production check FAILED for item 'Oak Wood Plank'. Required: 300, Available: 50
+ErrMsg: No task selected for running
+ErrMsg: Production check FAILED for item 'Oak Wood Plank'. Required: 120, Available: 50
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: NO products manufactured on this line
+ErrMsg: NO products manufactured on this line
+ErrMsg: NO products manufactured on this line
+ErrMsg: NO products manufactured on this line
+ErrMsg: NO active prodution lines available
+ErrMsg: NO active prodution lines available
+ErrMsg: NO products manufactured on this line
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: ID must be a number
 ErrMsg: No tasks found for this line
 ErrMsg: No lines found for this product
+ErrMsg: No lines found for this product
+ErrMsg: NO products manufactured on this line
+ErrMsg: NO products manufactured on this line

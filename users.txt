@@ -1,2 +1,0 @@
-a,a,Manager,tamer,t@gmail.com
-r,r,Product Supervisor,tt,sf@gmail.com

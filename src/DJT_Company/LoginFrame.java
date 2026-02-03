@@ -11,7 +11,7 @@ public class LoginFrame extends JFrame {
     JButton btnRegister;
     JButton btnBack;
     private final String filePath = "users.txt";
-    private HashMap<String, String[]> usersMap = new HashMap();
+    private HashMap<String, String[]> usersMap = new HashMap<>();
     public LoginFrame() {
         this.setTitle("Login - DJT");
         this.setIconImage((new ImageIcon("images/Logo2.jpg")).getImage());
@@ -48,7 +48,7 @@ public class LoginFrame extends JFrame {
         gbc.gridy = 0;
         gbc.weightx = 0.0;
         gbc.anchor = GridBagConstraints.WEST;
-        JLabel lblEmail = new JLabel("Username :");
+        JLabel lblEmail = new JLabel("Email :");
         lblEmail.setForeground(Color.WHITE);
         lblEmail.setFont(new Font("Segoe UI", Font.PLAIN, 18));
         fieldsPanel.add(lblEmail, gbc);
@@ -93,7 +93,7 @@ public class LoginFrame extends JFrame {
         panel.add(Box.createVerticalStrut(10));
         panel.add(btnRegister);
 
-        
+
         btnBack = createSecondButton("Back");
         btnBack.addActionListener(e -> {
             this.dispose();
@@ -138,16 +138,18 @@ public class LoginFrame extends JFrame {
     private void loadUsers() {
         File file = new File(filePath);
         if (!file.exists()) return;
-        usersMap.clear(); 
+        usersMap.clear();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(",");
-                if (parts.length >= 3) { 
-                    String username = parts[0];
+                if (parts.length >= 5) {
+                    String email = parts[4];
                     String password = parts[1];
                     String role = parts[2];
-                    usersMap.put(username, new String[] { password, role });
+                    String name = parts[3];
+                    String username = parts[0];
+                    usersMap.put(email, new String[] { password, role, name, username });
                 }
             }
         } catch (IOException e) {
